@@ -1,0 +1,169 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Add Link</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+</head>
+<body class="bg-white text-gray-900 font-sans">
+  <div class="max-w-md mx-auto p-6">
+    <header class="flex items-center space-x-2 mb-6">
+      <button aria-label="Close" class="text-2xl font-semibold leading-none">×</button>
+      <h1 class="text-lg font-semibold">Add Link</h1>
+    </header>
+
+    <form class="space-y-6">
+      <div>
+        <label for="url" class="block text-sm font-medium mb-1">URL</label>
+        <div class="flex items-center border border-gray-300 rounded-md focus-within:ring-2 focus-within:ring-blue-600 focus-within:border-blue-600">
+          <span class="pl-3 pr-2 text-gray-400">
+            <i class="fas fa-link"></i>
+          </span>
+          <input
+            id="url"
+            name="url"
+            type="url"
+            placeholder="https://example.com"
+            class="flex-grow py-2 pr-3 text-gray-500 placeholder-gray-400 focus:outline-none"
+          />
+          <button
+            type="button"
+            class="text-blue-600 font-medium px-3 py-2 hover:underline"
+          >
+            Fetch
+          </button>
+        </div>
+      </div>
+
+      <div>
+        <label for="title" class="block text-sm font-medium mb-1">Title</label>
+        <input
+          id="title"
+          name="title"
+          type="text"
+          placeholder="Link title"
+          class="w-full border border-gray-300 rounded-md py-2 px-3 text-gray-400 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600"
+        />
+      </div>
+
+      <div>
+        <label for="description" class="block text-sm font-medium mb-1">Description (optional)</label>
+        <textarea
+          id="description"
+          name="description"
+          rows="3"
+          placeholder="Add a description"
+          class="w-full border border-gray-300 rounded-md py-2 px-3 text-gray-400 placeholder-gray-400 resize-none focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600"
+        ></textarea>
+      </div>
+
+      <div>
+        <div class="flex justify-between items-center mb-2">
+          <h2 class="text-sm font-semibold">Tags</h2>
+          <button type="button" id="toggleTags" class="text-blue-600 font-medium hover:underline">Hide</button>
+        </div>
+        <div id="tagsSection" class="flex flex-wrap gap-3 bg-blue-50 rounded-lg p-3">
+          <button type="button" class="flex items-center space-x-2 bg-white rounded-md px-3 py-1.5 text-sm text-gray-900 hover:bg-gray-100">
+            <i class="fas fa-tag text-blue-500"></i>
+            <span>Work</span>
+          </button>
+          <button type="button" class="flex items-center space-x-2 bg-white rounded-md px-3 py-1.5 text-sm text-gray-900 hover:bg-gray-100">
+            <i class="fas fa-tag text-yellow-300"></i>
+            <span>Personal</span>
+          </button>
+          <button type="button" class="flex items-center space-x-2 bg-white rounded-md px-3 py-1.5 text-sm text-gray-900 hover:bg-gray-100">
+            <i class="fas fa-tag text-green-400"></i>
+            <span>Learning</span>
+          </button>
+          <button type="button" class="flex items-center space-x-2 bg-white rounded-md px-3 py-1.5 text-sm text-gray-900 hover:bg-gray-100">
+            <i class="fas fa-tag text-orange-300"></i>
+            <span>Entertainment</span>
+          </button>
+          <button type="button" class="flex items-center space-x-2 bg-white rounded-md px-3 py-1.5 text-sm text-gray-900 hover:bg-gray-100">
+            <i class="fas fa-tag text-purple-400"></i>
+            <span>Shopping</span>
+          </button>
+        </div>
+      </div>
+
+      <div>
+        <div class="flex justify-between items-center mb-2">
+          <h2 class="text-sm font-semibold">Folder</h2>
+          <button type="button" id="toggleFolders" class="text-blue-600 font-medium hover:underline">Hide</button>
+        </div>
+        <div id="foldersSection" class="bg-blue-50 rounded-lg p-3 space-y-2">
+          <button type="button" class="flex items-center space-x-2 bg-white rounded-md w-full px-3 py-2 text-gray-900 hover:bg-gray-100">
+            <i class="far fa-folder text-blue-500"></i>
+            <span>Favorites</span>
+          </button>
+          <button type="button" class="flex items-center space-x-2 bg-white rounded-md w-full px-3 py-2 text-gray-900 hover:bg-gray-100">
+            <i class="far fa-folder text-blue-500"></i>
+            <span>Work Projects</span>
+          </button>
+          <button type="button" class="flex items-center space-x-2 bg-white rounded-md w-full px-3 py-2 text-gray-900 hover:bg-gray-100">
+            <i class="far fa-folder text-blue-500"></i>
+            <span>Personal</span>
+          </button>
+          <button type="button" class="flex items-center space-x-2 bg-white rounded-md w-full px-3 py-2 text-gray-900 hover:bg-gray-100">
+            <i class="far fa-folder text-blue-500"></i>
+            <span>Learning</span>
+          </button>
+          <button type="button" class="flex items-center space-x-2 bg-white rounded-md w-full px-3 py-2 text-gray-900 hover:bg-gray-100">
+            <i class="far fa-folder text-blue-500"></i>
+            <span>Entertainment</span>
+          </button>
+          <button type="button" class="flex items-center space-x-2 bg-white rounded-md w-full px-3 py-2 text-gray-900 hover:bg-gray-100">
+            <i class="far fa-folder text-blue-500"></i>
+            <span>Shopping</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="flex space-x-4 pt-4 border-t border-gray-200">
+        <button
+          type="button"
+          class="flex-grow border border-blue-600 text-blue-600 rounded-md py-2 text-center font-medium hover:bg-blue-50"
+        >
+          Cancel
+        </button>
+        <button
+          type="submit"
+          class="flex-grow bg-blue-600 text-white rounded-md py-2 text-center font-medium hover:bg-blue-700"
+        >
+          Save Link
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const toggleTagsBtn = document.getElementById('toggleTags');
+    const tagsSection = document.getElementById('tagsSection');
+    toggleTagsBtn.addEventListener('click', () => {
+      if (tagsSection.style.display === 'none') {
+        tagsSection.style.display = 'flex';
+        toggleTagsBtn.textContent = 'Hide';
+      } else {
+        tagsSection.style.display = 'none';
+        toggleTagsBtn.textContent = 'Show';
+      }
+    });
+
+    const toggleFoldersBtn = document.getElementById('toggleFolders');
+    const foldersSection = document.getElementById('foldersSection');
+    toggleFoldersBtn.addEventListener('click', () => {
+      if (foldersSection.style.display === 'none') {
+        foldersSection.style.display = 'block';
+        toggleFoldersBtn.textContent = 'Hide';
+      } else {
+        foldersSection.style.display = 'none';
+        toggleFoldersBtn.textContent = 'Show';
+      }
+    });
+  </script>
+</body>
+</html>

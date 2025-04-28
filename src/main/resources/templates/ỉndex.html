@@ -1,0 +1,244 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Smart Link Storage
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-white text-gray-800">
+  <div class="flex h-screen border border-gray-300">
+   <!-- Sidebar -->
+   <aside class="flex flex-col w-64 border-r border-gray-300">
+    <div class="flex flex-col items-center py-8 border-b border-gray-300">
+     <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-800 to-purple-500 flex items-center justify-center mb-2">
+      <span class="text-white font-semibold text-lg select-none">
+       SLS
+      </span>
+     </div>
+     <span class="text-sm font-normal select-none">
+      Smart Link Storage
+     </span>
+    </div>
+    <nav class="flex flex-col mt-6 space-y-2 px-4">
+     <a class="flex items-center space-x-3 rounded-lg bg-blue-100 text-blue-700 px-4 py-2" href="#">
+      <i class="fas fa-home text-lg">
+      </i>
+      <span class="text-sm font-medium select-none">
+       Home
+      </span>
+     </a>
+     <a class="flex items-center space-x-3 text-gray-600 hover:text-gray-900 px-4 py-2 rounded-lg" href="#">
+      <i class="fas fa-search text-lg">
+      </i>
+      <span class="text-sm font-normal select-none">
+       Search
+      </span>
+     </a>
+     <a class="flex items-center space-x-3 text-gray-600 hover:text-gray-900 px-4 py-2 rounded-lg" href="#">
+      <i class="far fa-folder text-lg">
+      </i>
+      <span class="text-sm font-normal select-none">
+       Folders
+      </span>
+     </a>
+     <a class="flex items-center space-x-3 text-gray-600 hover:text-gray-900 px-4 py-2 rounded-lg" href="#">
+      <i class="fas fa-tag text-lg">
+      </i>
+      <span class="text-sm font-normal select-none">
+       Tags
+      </span>
+     </a>
+     <a class="flex items-center space-x-3 text-gray-600 hover:text-gray-900 px-4 py-2 rounded-lg" href="#">
+      <i class="fas fa-cog text-lg">
+      </i>
+      <span class="text-sm font-normal select-none">
+       Settings
+      </span>
+     </a>
+    </nav>
+    <div class="mt-auto border-t border-gray-300 px-4 py-4 flex items-center space-x-3">
+     <img alt="Profile picture of John Doe, a bald man with glasses" class="w-10 h-10 rounded-full object-cover" height="40" src="https://storage.googleapis.com/a1aa/image/72099966-a633-4461-91f8-6556760cf7a8.jpg" width="40"/>
+     <div class="flex flex-col text-sm">
+      <span class="font-semibold select-none">
+       John Doe
+      </span>
+      <span class="text-gray-500 select-none">
+       john@example.com
+      </span>
+     </div>
+    </div>
+    <a class="flex items-center space-x-3 bg-blue-100 text-blue-700 px-4 py-2 rounded-lg mt-2 mx-4 mb-6" href="#">
+     <i class="fas fa-sign-out-alt text-lg">
+     </i>
+     <span class="text-sm font-medium select-none">
+      Logout
+     </span>
+    </a>
+   </aside>
+   <!-- Main content -->
+   <main class="flex-1 flex flex-col border-l border-gray-300">
+    <header class="flex items-center justify-between px-6 py-4 border-b border-gray-300">
+     <h1 class="text-lg font-semibold select-none">
+      Smart Link Storage
+     </h1>
+     <button aria-label="Add new link" class="text-blue-700 hover:text-blue-900 focus:outline-none">
+      <i class="fas fa-plus text-xl">
+      </i>
+     </button>
+    </header>
+    <section class="flex flex-col p-6 space-y-4 overflow-y-auto">
+     <div class="flex space-x-3">
+      <div class="flex-1 relative">
+       <input class="w-full rounded-xl border border-gray-200 bg-gray-100 px-4 py-3 text-gray-400 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Search links..." type="search"/>
+      </div>
+      <button aria-label="Filter links" class="flex items-center justify-center rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+       <i class="fas fa-filter text-lg">
+       </i>
+      </button>
+     </div>
+     <!-- Link cards container -->
+     <div class="flex flex-col space-y-4 pr-2 max-h-[calc(100vh-160px)] overflow-y-auto">
+      <!-- Card 1 -->
+      <article aria-label="Link card for Expo - The fastest way to build an app" class="border border-gray-200 rounded-xl p-4 flex flex-col space-y-2 relative">
+       <div class="flex items-center space-x-2 text-xs text-gray-500 select-none">
+        <span>
+         expo.dev
+        </span>
+        <button aria-label="Star this link" class="ml-auto text-yellow-400 hover:text-yellow-500 focus:outline-none">
+         <i class="far fa-star">
+         </i>
+        </button>
+        <button aria-label="More options" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+         <i class="fas fa-ellipsis-h">
+         </i>
+        </button>
+       </div>
+       <div class="flex space-x-4">
+        <img alt="Photo of a person holding a phone showing an app screen with charts and graphs" class="w-16 h-16 rounded-lg object-cover" height="64" src="https://storage.googleapis.com/a1aa/image/9626f78b-7bb4-4502-8e63-efab1e97f760.jpg" width="64"/>
+        <div class="flex flex-col">
+         <h2 class="font-semibold text-sm leading-tight select-none">
+          Expo - The fastest way to build an app
+         </h2>
+         <p class="text-gray-600 text-xs leading-tight max-w-[calc(100vw-320px)]">
+          Expo is an open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React.
+         </p>
+         <div class="flex space-x-2 mt-1">
+          <span class="text-xs bg-blue-100 text-blue-700 rounded-full px-2 py-0.5 select-none">
+           Work
+          </span>
+          <span class="text-xs bg-green-100 text-green-600 rounded-full px-2 py-0.5 select-none">
+           Learning
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="flex items-center justify-end space-x-3 text-xs text-gray-400 mt-2 select-none">
+        <time datetime="2023-09-29">
+         5 day
+        </time>
+        <button aria-label="Open link in new tab" class="text-blue-600 hover:text-blue-800 focus:outline-none">
+         <i class="fas fa-external-link-alt">
+         </i>
+        </button>
+       </div>
+      </article>
+      <!-- Card 2 -->
+      <article aria-label="Link card for Netflix - Watch TV Shows Online, Watch Movies Online" class="border border-gray-200 rounded-xl p-4 flex flex-col space-y-2 relative">
+       <div class="flex items-center space-x-2 text-xs text-gray-500 select-none">
+        <img alt="Netflix logo red letter N on black background" class="w-4 h-4 object-contain" height="16" src="https://storage.googleapis.com/a1aa/image/c114da0d-c5b7-4169-1949-33ad200b969d.jpg" width="16"/>
+        <span>
+         netflix.com
+        </span>
+        <button aria-label="Star this link" class="ml-auto text-yellow-400 hover:text-yellow-500 focus:outline-none">
+         <i class="far fa-star">
+         </i>
+        </button>
+        <button aria-label="More options" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+         <i class="fas fa-ellipsis-h">
+         </i>
+        </button>
+       </div>
+       <div class="flex space-x-4">
+        <img alt="TV screen showing Netflix interface with red Netflix logo" class="w-16 h-16 rounded-lg object-cover" height="64" src="https://storage.googleapis.com/a1aa/image/66195538-cc0c-4bfa-e954-3da7abcaa240.jpg" width="64"/>
+        <div class="flex flex-col">
+         <h2 class="font-semibold text-sm leading-tight select-none">
+          Netflix - Watch TV Shows Online, Watch Movies Online
+         </h2>
+         <p class="text-gray-600 text-xs leading-tight max-w-[calc(100vw-320px)]">
+          Watch Netflix movies &amp; TV shows online or stream right to your smart TV, game console, PC, Mac, mobile, tablet and more.
+         </p>
+         <div class="flex space-x-2 mt-1">
+          <span class="text-xs bg-orange-100 text-orange-600 rounded-full px-2 py-0.5 select-none">
+           Entertainment
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="flex items-center justify-end space-x-3 text-xs text-gray-400 mt-2 select-none">
+        <time datetime="2023-09-19">
+         15 day
+        </time>
+        <button aria-label="Open link in new tab" class="text-blue-600 hover:text-blue-800 focus:outline-none">
+         <i class="fas fa-external-link-alt">
+         </i>
+        </button>
+       </div>
+      </article>
+      <!-- Card 3 -->
+      <article aria-label="Link card for Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs &amp; more" class="border border-gray-200 rounded-xl p-4 flex flex-col space-y-2 relative">
+       <div class="flex items-center space-x-2 text-xs text-gray-500 select-none">
+        <img alt="Amazon logo black letter a on white background" class="w-4 h-4 object-contain" height="16" src="https://storage.googleapis.com/a1aa/image/cee33302-39fc-4101-677e-66f3adcdd5c5.jpg" width="16"/>
+        <span>
+         amazon.com
+        </span>
+        <button aria-label="Star this link" class="ml-auto text-yellow-400 hover:text-yellow-500 focus:outline-none">
+         <i class="far fa-star">
+         </i>
+        </button>
+        <button aria-label="More options" class="text-gray-400 hover:text-gray-600 focus:outline-none">
+         <i class="fas fa-ellipsis-h">
+         </i>
+        </button>
+       </div>
+       <div class="flex space-x-4">
+        <img alt="Close up photo of a phone screen showing Amazon shopping app" class="w-16 h-16 rounded-lg object-cover" height="64" src="https://storage.googleapis.com/a1aa/image/fe21b74b-4619-4048-f599-ecc4ad94e566.jpg" width="64"/>
+        <div class="flex flex-col">
+         <h2 class="font-semibold text-sm leading-tight select-none">
+          Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs &amp; more
+         </h2>
+         <p class="text-gray-600 text-xs leading-tight max-w-[calc(100vw-320px)]">
+          Online shopping from the earth's biggest selection of books, magazines, music, DVDs, videos, electronics, computers, software, apparel &amp; accessories,...
+         </p>
+         <div class="flex space-x-2 mt-1">
+          <span class="text-xs bg-purple-100 text-purple-600 rounded-full px-2 py-0.5 select-none">
+           Shopping
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="flex items-center justify-end space-x-3 text-xs text-gray-400 mt-2 select-none">
+        <time datetime="2023-09-14">
+         20 day
+        </time>
+        <button aria-label="Open link in new tab" class="text-blue-600 hover:text-blue-800 focus:outline-none">
+         <i class="fas fa-external-link-alt">
+         </i>
+        </button>
+       </div>
+      </article>
+     </div>
+    </section>
+   </main>
+  </div>
+ </body>
+</html>

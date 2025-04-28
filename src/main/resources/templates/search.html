@@ -1,0 +1,214 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Search Page
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-white text-gray-900 p-6 max-w-4xl mx-auto">
+  <h2 class="text-lg font-semibold mb-4">
+   Search
+  </h2>
+  <form class="flex items-center space-x-2 mb-3">
+   <label class="sr-only" for="search">
+    Search
+   </label>
+   <div class="flex items-center flex-1 bg-gray-100 rounded-xl px-4 py-2 text-gray-400 text-sm">
+    <i class="fas fa-search mr-2">
+    </i>
+    <input class="bg-transparent focus:outline-none w-full" id="search" placeholder="Search by title, URL, or tag..." type="search"/>
+   </div>
+   <button aria-label="Recent" class="flex items-center justify-center w-12 h-12 rounded-xl bg-gray-100 text-blue-700 hover:bg-gray-200" type="button">
+    <i class="far fa-clock text-lg">
+    </i>
+   </button>
+   <button aria-label="Filter" class="flex items-center justify-center w-12 h-12 rounded-xl bg-gray-100 text-blue-700 hover:bg-gray-200" type="button">
+    <i class="fas fa-sliders-h text-lg">
+    </i>
+   </button>
+  </form>
+  <div class="mb-4 space-x-2">
+   <span class="inline-flex items-center rounded-md bg-blue-200 text-blue-800 text-xs font-semibold px-3 py-1">
+    Work
+    <button aria-label="Remove Work tag" class="ml-1 text-blue-800 hover:text-blue-900 focus:outline-none" type="button">
+     <i class="fas fa-times text-xs">
+     </i>
+    </button>
+   </span>
+   <span class="inline-flex items-center rounded-md bg-yellow-200 text-yellow-800 text-xs font-semibold px-3 py-1">
+    Personal
+    <button aria-label="Remove Personal tag" class="ml-1 text-yellow-800 hover:text-yellow-900 focus:outline-none" type="button">
+     <i class="fas fa-times text-xs">
+     </i>
+    </button>
+   </span>
+  </div>
+  <p class="font-medium mb-2">
+   Popular Tags
+  </p>
+  <div class="mb-6 space-x-3">
+   <button class="inline-flex items-center rounded-md bg-blue-200 text-blue-800 text-xs font-semibold px-3 py-1" type="button">
+    Work
+   </button>
+   <button class="inline-flex items-center rounded-md border border-yellow-300 text-yellow-700 text-xs font-semibold px-3 py-1" type="button">
+    Personal
+   </button>
+   <button class="inline-flex items-center rounded-md bg-green-100 text-green-600 text-xs font-semibold px-3 py-1" type="button">
+    Learning
+   </button>
+   <button class="inline-flex items-center rounded-md bg-orange-100 text-orange-600 text-xs font-semibold px-3 py-1" type="button">
+    Entertainment
+   </button>
+   <button class="inline-flex items-center rounded-md bg-purple-100 text-purple-600 text-xs font-semibold px-3 py-1" type="button">
+    Shopping
+   </button>
+  </div>
+  <ul class="space-y-4">
+   <li class="border border-gray-200 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between">
+    <div class="flex items-center space-x-3 mb-3 sm:mb-0">
+     <img alt="React logo, a blue atom symbol" class="w-6 h-6 flex-shrink-0" height="24" src="https://storage.googleapis.com/a1aa/image/6e987321-895b-482c-f98f-9c1173eab18e.jpg" width="24"/>
+     <div>
+      <p class="text-xs text-gray-600 mb-0.5">
+       reactnative.dev
+      </p>
+      <h3 class="font-semibold text-base leading-tight">
+       React Native - A framework for building native apps
+      </h3>
+      <div class="mt-1">
+       <span class="inline-flex items-center rounded-md bg-blue-200 text-blue-800 text-xs font-semibold px-2 py-0.5">
+        Work
+       </span>
+       <span class="text-xs text-gray-400 ml-1">
+        +1
+       </span>
+      </div>
+     </div>
+    </div>
+    <div class="flex items-center space-x-3 text-gray-500 text-sm sm:flex-col sm:items-end sm:space-x-0 sm:space-y-1">
+     <button aria-label="Pin" class="text-blue-700 hover:text-blue-900" type="button">
+      <i class="fas fa-thumbtack">
+      </i>
+     </button>
+     <button aria-label="Star" class="text-yellow-400 hover:text-yellow-500" type="button">
+      <i class="far fa-star">
+      </i>
+     </button>
+     <button aria-label="More options" class="text-gray-400 hover:text-gray-600" type="button">
+      <i class="fas fa-ellipsis-h">
+      </i>
+     </button>
+     <button aria-label="Open link" class="flex items-center text-blue-700 hover:text-blue-900" type="button">
+      <i class="fas fa-external-link-alt text-base">
+      </i>
+     </button>
+     <span class="text-xs text-gray-400 flex items-center space-x-1">
+      <i class="far fa-clock text-xs">
+      </i>
+      <span>
+       2 days ago
+      </span>
+     </span>
+    </div>
+   </li>
+   <li class="border border-gray-200 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between">
+    <div class="flex items-center space-x-3 mb-3 sm:mb-0">
+     <img alt="GitHub logo, black cat silhouette inside a circle" class="w-6 h-6 flex-shrink-0" height="24" src="https://storage.googleapis.com/a1aa/image/8bc96ed6-ca09-44f8-431d-bf49d054ab2e.jpg" width="24"/>
+     <div>
+      <p class="text-xs text-gray-600 mb-0.5">
+       github.com
+      </p>
+      <h3 class="font-semibold text-base leading-tight">
+       GitHub: Where the world builds software
+      </h3>
+      <div class="mt-1">
+       <span class="inline-flex items-center rounded-md bg-blue-200 text-blue-800 text-xs font-semibold px-2 py-0.5">
+        Work
+       </span>
+       <span class="text-xs text-gray-400 ml-1">
+        +1
+       </span>
+      </div>
+     </div>
+    </div>
+    <div class="flex items-center space-x-3 text-gray-500 text-sm sm:flex-col sm:items-end sm:space-x-0 sm:space-y-1">
+     <button aria-label="Pin" class="text-blue-700 hover:text-blue-900" type="button">
+      <i class="fas fa-thumbtack">
+      </i>
+     </button>
+     <button aria-label="Brain icon" class="text-pink-600" style="pointer-events:none" type="button">
+      <img alt="Brain icon in pink and purple colors" class="w-5 h-5" height="20" src="https://storage.googleapis.com/a1aa/image/c1489916-eb7a-4b67-079a-b2d57fb88464.jpg" width="20"/>
+     </button>
+     <button aria-label="More options" class="text-gray-400 hover:text-gray-600" type="button">
+      <i class="fas fa-ellipsis-h">
+      </i>
+     </button>
+     <button aria-label="Open link" class="flex items-center text-blue-700 hover:text-blue-900" type="button">
+      <i class="fas fa-external-link-alt text-base">
+      </i>
+     </button>
+     <span class="text-xs text-gray-400 flex items-center space-x-1">
+      <i class="far fa-clock text-xs">
+      </i>
+      <span>
+       10 days ago
+      </span>
+     </span>
+    </div>
+   </li>
+   <li class="border border-gray-200 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between">
+    <div class="flex items-center space-x-3 mb-3 sm:mb-0">
+     <img alt="Expo logo, black circle with white 'X' inside" class="w-6 h-6 flex-shrink-0" height="24" src="https://storage.googleapis.com/a1aa/image/2a35a292-a59a-424e-e728-1222373da55a.jpg" width="24"/>
+     <div>
+      <p class="text-xs text-gray-600 mb-0.5">
+       expo.dev
+      </p>
+      <h3 class="font-semibold text-base leading-tight">
+       Expo - The fastest way to build an app
+      </h3>
+      <div class="mt-1">
+       <span class="inline-flex items-center rounded-md bg-blue-200 text-blue-800 text-xs font-semibold px-2 py-0.5">
+        Work
+       </span>
+       <span class="text-xs text-gray-400 ml-1">
+        +1
+       </span>
+      </div>
+     </div>
+    </div>
+    <div class="flex items-center space-x-3 text-gray-500 text-sm sm:flex-col sm:items-end sm:space-x-0 sm:space-y-1">
+     <div class="w-5 h-5">
+     </div>
+     <button aria-label="Star" class="text-yellow-400 hover:text-yellow-500" type="button">
+      <i class="far fa-star">
+      </i>
+     </button>
+     <button aria-label="More options" class="text-gray-400 hover:text-gray-600" type="button">
+      <i class="fas fa-ellipsis-h">
+      </i>
+     </button>
+     <button aria-label="Open link" class="flex items-center text-blue-700 hover:text-blue-900" type="button">
+      <i class="fas fa-external-link-alt text-base">
+      </i>
+     </button>
+     <span class="text-xs text-gray-400 flex items-center space-x-1">
+      <i class="far fa-clock text-xs">
+      </i>
+      <span>
+       5 days ago
+      </span>
+     </span>
+    </div>
+   </li>
+  </ul>
+ </body>
+</html>
